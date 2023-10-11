@@ -12,7 +12,12 @@ public class UserService {
         this.emailService = emailService;
     }
 
-    public void registerUser(String Username, String email) {
-        emailService.sendEmail(email, "Welcome to our platform");
+    public String registerUser(String Username, String email) {
+       return emailService.sendEmail(email, " Welcome to our platform");
     }
+
+    public String registerUserBody(UserDetails user) {
+        return emailService.sendEmail(user.getEmail(), " Welcome to our platform");
+    }
+
 }
