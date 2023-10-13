@@ -18,7 +18,6 @@ public class UserController {
     }
 
     @PostMapping("/registerUserBody")
-   // @ResponseStatus(HttpStatus.CREATED)
     public String setUser(@RequestBody UserDetails userDetails) {
         return userService.registerUserBody(userDetails);
     }
